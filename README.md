@@ -45,7 +45,7 @@ You can pass entries array:
 mix.webpack(['entry1.js', 'entry2.js', 'entry3.js'], { ...webpackOptions });
 ```
 
-or Pass an key-value Object in it:
+or Pass key-value Object in it:
 
 ```js
 mix.webpack({
