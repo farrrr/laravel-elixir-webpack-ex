@@ -51,7 +51,7 @@ or Pass an `entry` option in it:
 mix.webpack({
   App: 'entry1.js',
   Backend: 'entry2.js',
-  Dashboard: 'entry3.js,
+  Dashboard: 'entry3.js',
 }, {...webpackOptions });
 ```
 
