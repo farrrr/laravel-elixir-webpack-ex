@@ -45,7 +45,7 @@ You can pass entries array:
 mix.webpack(['entry1.js', 'entry2.js', 'entry3.js'], { ...webpackOptions });
 ```
 
-or Pass an `entry` option in it:
+or Pass an key-value Object in it:
 
 ```js
 mix.webpack({
@@ -54,6 +54,7 @@ mix.webpack({
   Dashboard: 'entry3.js',
 }, {...webpackOptions });
 ```
+like webpack `entry` option, it will produce App.js, Backend.js, Dashboard.js at output dir.
 
 ## License
 Copyright (c) 2015 Far Tseng
