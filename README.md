@@ -12,19 +12,19 @@ nam install laravel-elixir-webpack-ex —-save
 ### Simple Example
 
 ```js
-var elixir = require(‘laravel-elixir’);
-var gulp = require(‘gulp’);
+var elixir = require('laravel-elixir');
+var gulp = require('gulp');
 
-require(‘laravel-elixir-webpack-ex’);
+require('laravel-elixir-webpack-ex');
 
 elixir(function(mix) {
-  mix.webpack(‘entry.js’, {
+  mix.webpack('entry.js', {
     module: {
       loaders: [
-        { test: /\.css$/, loader: ‘style!css’ },
+        { test: /\.css$/, loader: 'style!css' },
       ],
     },
-  }, ‘public/js’, ‘resources/assets/js’);
+  }, 'public/js', 'resources/assets/js');
 });
 ```
 
@@ -34,7 +34,7 @@ elixir(function(mix) {
 You can pass your `webpack.config.js`:
 
 ```js
-mix.webpack(‘entry.js’, require(‘./webpack.config.js’));
+mix.webpack('entry.js', require('./webpack.config.js'));
 ```
 
 ### Multiple Entry Points
