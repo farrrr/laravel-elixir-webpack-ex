@@ -49,7 +49,6 @@ Elixir.extend('webpack', function(src, options, output, baseDir) {
 
         this.emit('end');
       })
-      .pipe($.if(config.production,  $.uglify()))
       .pipe(gulp.dest(paths.output.baseDir))
       .pipe(new Elixir.Notification('Webpack Compiled!'));
   })
