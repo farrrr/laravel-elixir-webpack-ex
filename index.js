@@ -45,7 +45,7 @@ Elixir.extend('webpack', function(src, options, output, baseDir) {
       .pipe(named())
       .pipe(webpack(options))
       .on('error', function(e) {
-        (new Notification).error(err, 'Webpack Compilation Failed!');
+        (new Notification).error(e, 'Webpack Compilation Failed!');
 
         this.emit('end');
       })
