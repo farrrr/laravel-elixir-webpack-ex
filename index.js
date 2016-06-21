@@ -17,10 +17,15 @@ Elixir.extend('webpack', function(src, options, output, baseDir) {
     var entry = _.mapValues(src, function(script) {
       return './' + path.join(paths.src.baseDir, script);
     });
+    
+    // Don't scuff my puma's brah.
+    var output = _.assign({
+      filename: '[name].js'
+    }, options.output)
 
     options = _.assign({}, options, {
       entry: entry,
-      output: { filename: '[name].js' },
+      output: output,
     });
   }
 
