@@ -6,7 +6,6 @@ var named = require('vinyl-named');
 var _ = require('lodash');
 
 var Task = Elixir.Task;
-var Notification = Elixir.Notification;
 var config = Elixir.config;
 var $ = Elixir.Plugins;
 
@@ -50,7 +49,7 @@ Elixir.extend('webpack', function(src, options, output, baseDir) {
       .pipe(named())
       .pipe(webpack(options))
       .on('error', function(e) {
-        (new Notification).error(e, 'Webpack Compilation Failed!');
+        (new Elixir.Notification).error(e, 'Webpack Compilation Failed!');
 
         this.emit('end');
       })
